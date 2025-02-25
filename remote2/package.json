@@ -1,0 +1,26 @@
+{
+  "name": "react-ssr_remote2",
+  "version": "0.0.0",
+  "scripts": {
+    "start": "pnpm build && pnpm serve",
+    "serve": "npx serve dist/ -p 3002",
+    "build": "pnpm build:client && pnpm build:server",
+    "build:client": "rimraf dist/client && rspack build -c config/rspack.client.js",
+    "build:server": "rimraf dist/server && rspack build -c config/rspack.server.js"
+  },
+  "dependencies": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@module-federation/enhanced": "^0.8.9",
+    "@module-federation/node": "^2.6.26",
+    "@rspack/cli": "^1.2.2",
+    "@rspack/core": "^1.2.2",
+    "@types/react": "18.2.46",
+    "@types/react-dom": "18.2.18",
+    "rimraf": "3.0.2",
+    "webpack-merge": "5.10.0",
+    "typescript": "^5.3.3"
+  }
+}
