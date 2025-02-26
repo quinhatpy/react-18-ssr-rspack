@@ -7,6 +7,7 @@ const moduleFederationPlugin = require("./module-federation-rspack");
  * @type {import('rspack').Configuration}
  **/
 const rspackConfig = {
+  target: 'async-node',
   output: {
     path: path.resolve(__dirname, "../dist/server"),
     filename: "[name].js",

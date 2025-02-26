@@ -8,7 +8,7 @@ const moduleFederationPlugin = require("./module-federation-rspack");
  **/
 const rspackConfig = {
   name: "server",
-  target: "node",
+  target: 'async-node',
   entry: [path.resolve(__dirname, "../src/server/index")],
   output: {
     path: path.resolve(__dirname, "../dist/server"),

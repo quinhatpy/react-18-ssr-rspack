@@ -29,6 +29,7 @@ module.exports = {
     new ModuleFederationPlugin({
       name: "remote1",
       filename: "remoteEntry.js",
+      remoteType: 'script',
       runtimePlugins: [
         require.resolve("@module-federation/node/runtimePlugin"),
       ],

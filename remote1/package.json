@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "start": "pnpm build && pnpm serve",
-    "serve": "npx serve dist/ -p 3001",
+    "serve": "npx serve dist/ -p 3001 --cors",
     "build": "pnpm build:client && pnpm build:server",
     "build:client": "rimraf dist/client && rspack build -c config/rspack.client.js",
     "build:server": "rimraf dist/server && rspack build -c config/rspack.server.js"

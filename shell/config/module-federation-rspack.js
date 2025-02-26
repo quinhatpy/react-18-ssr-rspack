@@ -16,6 +16,7 @@ module.exports = {
   server: [
     new ModuleFederationPlugin({
       name: "shell",
+      remoteType: 'script',
       runtimePlugins: [
         require.resolve("@module-federation/node/runtimePlugin"),
       ],
